@@ -31,8 +31,7 @@ class tree:
       self.root = node(value)
 
    def add_node(self, value, cur_node=None):
-      if cur_node == None:
-         cur_node = self.root
+      cur_node = cur_node or self.root
       cur_value = cur_node.retrieve_value()
       if cur_value == value:
          return
@@ -105,3 +104,5 @@ class tree:
       if pivoti < len(listin)-1:
          self.add_list_sorted(listin[pivoti:])
       
+
+
